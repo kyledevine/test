@@ -1,10 +1,484 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CS171 - Final Project</title>
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:100,400,300,400italic,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<h1>hi</h1>
+
+<div id="navbar">
+	<ul>
+	<li><a href="#overview" class="activesec">Overview</a></li>
+	<li><a href="#uptick">Uptick in Weather Events</a></li>
+		<li><a href="#newspaper">What the News is Saying</a></li>
+		<li><a href="#damage">Damage</a></li>
+		<li><a href="#storms">Specific Storms</a></li>
+		<li><a href="#climatechange">Climate Change</a></li>
+
+	</ul>
+</div>
+
+<div id="overview">
+<div class="overview" id="videoDiv">
+<div class="hero-image overview">
+	<video autoplay muted loop id="myVideo" class="overview">
+		<source src="videos/171 Montage.mp4.mov" type="video/mp4" class="overview">
+		Your browser does not support HTML5 video.
+	</video>
+	<div class="content overview">
+		<br><br><br><br><br><br>
+		<h1><br><br>Severe Weather and Climate Change</h1>
+		<h4>Exploring the Link between Temperature Change and Occurrence of Damaging Weather Events</h4>
+		<a class="arrow" href="#uptick">&#8744;</a>
+	</div>
+</div>
+</div>
+</div>
+
+<div id="uptick">
+<div class="hero-image overview">
+	<div class="hero-text">
+		<h1>Uptick in Severe Weather Events</h1><h3> "Normal weather, unchanged over generations apart from random fluctuations, is a thing of the past."</h3>
+		<h5>- Miles Allen, Climate Dynamics of Oxford University</h5>
+		<a class="arrow" href="#areachartsection">&#8744;</a>
+	</div>
+</div>
+
+
+<div class="container-fluid data" id="areachartsection">
+	<div class = "row-fluid">
+		<div class= "col-md-4 text area-text">
+			<h3>Severe weather occurrence is, and has been, on the rise.  The number of severe weather events recorded in 2016 was 5 times as high as it was in 1980.</h3>
+			<br/>
+			<h5>Click, drag, and move the bottom timeline to zoom in on certain areas. Click the events in the "Filter"
+				region to focus on specific severe weather events.</h5>
+		</div>
+		<div class = "col-md-8 visual1 area-visual">
+			<h4>Volume of Severe Weather Events Recorded by Year</h4>
+			<div class = "area-chart"></div>
+			<div id="stacked-area-chart"></div>
+			<div id="timeline"></div>
+</div>
+	</div>
+</div>
+</div>
+<div class="container-fluid data" id="newspaper">
+	<div class = "row-fluid">
+		<div class = "col-md-12">
+			<div class="section"><h2>What Newspapers Have Been Saying</h2><h5>Click through to see articles that discuss the correlation between climate change and severe weather, and click on the photos to be redirected to the article.</h5></div>
+
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="carousel slide multi-item-carousel" id="theCarousel">
+							<div class="carousel-inner">
+								<div class="item active">
+									<div class="col-xs-4">
+										<a href="https://www.nytimes.com/interactive/2017/09/15/climate/does-climate-change-cause-hurricanes-drought.html"><img src="img/news/nyt1.jpg" class="img-responsive">
+											<div class="carousel-caption d-none d-md-block">
+												<h3>From Heat Waves to Hurricanes: What We Know About Extreme Weather and Climate Change</h3>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="item">
+									<div class="col-xs-4">
+										<a href="https://www.nytimes.com/2014/05/13/science/looks-like-rain-again-and-again.html?_r=0"><img src="img/news/nyt2.jpg" class="img-responsive">
+											<div class="carousel-caption d-none d-md-block">
+												<h3>Looks Like Rain Again. And Again.</h3>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="item">
+									<div class="col-xs-4">
+										<a href="https://www.nytimes.com/2015/08/21/science/climate-change-intensifies-california-drought-scientists-say.html"><img src="img/news/nyt3.jpg" class="img-responsive">
+											<div class="carousel-caption d-none d-md-block">
+												<h3>California Drought Is Made Worse by Global Warming, Scientists Say</h3>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="item">
+									<div class="col-xs-4">
+										<a href="https://www.nytimes.com/2017/08/25/us/hurricane-harvey-climate-change-texas.html"><img src="img/news/nyt4.jpg" class="img-responsive">
+											<div class="carousel-caption d-none d-md-block">
+												<h3>The Relationship Between Hurricanes and Climate Change</h3>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="item">
+									<div class="col-xs-4">
+										<a href="https://www.nytimes.com/2017/12/07/climate/california-fires-warming.html?rref=collection%2Fsectioncollection%2Fclimate"><img src="img/news/nyt5.jpg" class="img-responsive">
+											<div class="carousel-caption d-none d-md-block">
+												<h3>In a Warming California, a Future of More Fire</h3>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="item">
+									<div class="col-xs-4">
+										<a href="https://www.nytimes.com/2017/11/03/climate/climate-change-impacts.html?rref=collection%2Fsectioncollection%2Fclimate"><img src="img/news/nyt6.jpg" class="img-responsive">
+											<div class="carousel-caption d-none d-md-block">
+												<h3>What the Climate Report Says About the Impact of Global Warming</h3>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="item">
+									<div class="col-xs-4">
+										<a href="http://www.nytimes.com/2012/08/12/opinion/sunday/extreme-weather-and-drought-are-here-to-stay.html"><img src="img/news/nyt8.jpg" class="img-responsive">
+											<div class="carousel-caption d-none d-md-block">
+												<h3>Hundred-Year Forecast: Drought</h3>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="item">
+									<div class="col-xs-4">
+										<a href="https://www.theatlantic.com/science/archive/2017/12/what-climate-change-did-and-didnt-have-to-do-with-the-socal-fires/547712/"><img src="img/news/nyt9.jpg" class="img-responsive">
+											<div class="carousel-caption d-none d-md-block">
+												<h3>Did Climate Change Worsen the Southern California Fires?</h3>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="item">
+									<div class="col-xs-4">
+										<a href="https://www.theatlantic.com/science/archive/2017/08/did-climate-change-intensify-hurricane-harvey/538158/"><img src="img/news/nyt10.jpg" class="img-responsive">
+											<div class="carousel-caption d-none d-md-block">
+												<h3>Did Climate Change Intensify Hurricane Harvey?</h3>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="item">
+									<div class="col-xs-4">
+										<a href="https://www.theatlantic.com/science/archive/2017/10/climate-change-nyc-floods/543708/"><img src="img/news/nyt11.jpg" class="img-responsive">
+											<div class="carousel-caption d-none d-md-block">
+												<h3>Climate Change Will Bring Major Flooding to New York Every 5 Years</h3>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="item">
+									<div class="col-xs-4">
+										<a href="https://www.theatlantic.com/science/archive/2017/09/fake-dichotomies/539259/"><img src="img/news/at12.jpg" class="img-responsive">
+											<div class="carousel-caption d-none d-md-block">
+												<h3>It Is a Time to Talk About Climate Change</h3>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="item">
+									<div class="col-xs-4">
+										<a href="https://www.theatlantic.com/science/archive/2017/05/hot-summers-climate-change/524253/"><img src="img/news/at13.jpg" class="img-responsive">
+											<div class="carousel-caption d-none d-md-block">
+												<h3>Climate Change Is Causing More Sweltering Summer Days</h3>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="item">
+									<div class="col-xs-4">
+										<a href="https://www.theatlantic.com/science/archive/2017/10/and-the-mountains-should-crumble-to-the-sea/541659/"><img src="img/news/at14.jpg" class="img-responsive">
+											<div class="carousel-caption d-none d-md-block">
+												<h3>Will Climate Change Make Rockslides Worse?</h3>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="item">
+									<div class="col-xs-4">
+										<a href="https://www.theatlantic.com/international/archive/2011/07/an-era-of-tornadoes-how-global-warming-causes-wild-winds/241639/"><img src="img/news/at15.jpg" class="img-responsive">
+											<div class="carousel-caption d-none d-md-block">
+												<h3>An Era of Tornadoes: How Global Warming Causes Wild Winds</h3>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="item">
+									<div class="col-xs-4">
+										<a href="https://www.washingtonpost.com/news/energy-environment/wp/2017/11/13/climate-change-upped-the-odds-of-harveys-extreme-rains-study-finds/?utm_term=.fd898659decd"><img src="img/news/wp16.jpg" class="img-responsive">
+											<div class="carousel-caption d-none d-md-block">
+												<h3>Climate change upped the odds of Hurricane Harvey’s extreme rains, study finds</h3>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="item">
+									<div class="col-xs-4">
+										<a href="https://www.washingtonpost.com/national/health-science/climate-change-fueling-disasters-disease-in-potentially-irreversible-ways-report-warns/2017/10/30/4f450ac4-bdaf-11e7-959c-fe2b598d8c00_story.html?utm_term=.65a5ae1cbe30"><img src="img/news/wp17.jpg" class="img-responsive">
+											<div class="carousel-caption d-none d-md-block">
+												<h3>Climate change fueling disasters, disease in ‘potentially irreversible’ ways, report warns</h3>
+											</div>
+										</a>
+									</div>
+								</div>
+							</div>
+							<a class="left carousel-control" href="#theCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+							<a class="right carousel-control" href="#theCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container-fluid data" id="damage">
+	<div class="hero-image overview">
+		<div class="hero-text">
+			<h1>Damage</h1><h3> "Climate Change increasingly poses one of the biggest long-term threat to investments."</h3><h5>Christina Figures, Secretary of the UNFCCC</h5>
+			<a class="arrow" href="#damagesection">&#8744;</a>
+		</div>
+	</div>
+	<div class = "row-fluid" id="damagesection">
+		<div class= "col-md-2 text line-text1">
+			<h3>Compare Climate Variance with Severe Weather Effects per State</h3>
+		</div>
+		<div class= "col-md-8 visual1 line-visual">
+			<div class = "line-chart" id="chart"></div>
+		</div>
+		<div class= "col-md-2 text line-text2">
+			<br>
+			<h5>Interact</h5>
+			<h6>Change the state and data by clicking on the dropdown buttons</h6>
+			<br>
+			<form class="form-inline">
+				<div class="form-group">
+					<label for="ranking-type">Data:</label>
+					<select class="form-control" id="ranking-type">
+						<option value="DEATHS">Fatalities</option>
+						<option value="INJURIES">Injuries</option>
+						<option value="DAMAGE">Money Lost</option>
+					</select>
+				</div>
+			</form>
+			<form class="form-inline">
+				<div class="form-group">
+					<label for="state-type">State:</label>
+					<select class="form-control" id="state-type">
+						<option value="AL" selected="selected">Alabama</option>
+						<option value="AK">Alaska</option>
+						<option value="AZ">Arizona</option>
+						<option value="AR">Arkansas</option>
+						<option value="CA">California</option>
+						<option value="CO">Colorado</option>
+						<option value="CT">Connecticut</option>
+						<option value="DE">Delaware</option>
+						<option value="FL">Florida</option>
+						<option value="GA">Georgia</option>
+						<option value="HI">Hawaii</option>
+						<option value="ID">Idaho</option>
+						<option value="IL">Illinois</option>
+						<option value="IN">Indiana</option>
+						<option value="IA">Iowa</option>
+						<option value="KS">Kansas</option>
+						<option value="KY">Kentucky</option>
+						<option value="LA">Louisiana</option>
+						<option value="ME">Maine</option>
+						<option value="MD">Maryland</option>
+						<option value="MA">Massachusetts</option>
+						<option value="MI">Michigan</option>
+						<option value="MN">Minnesota</option>
+						<option value="MS">Mississippi</option>
+						<option value="MO">Missouri</option>
+						<option value="MT">Montana</option>
+						<option value="NE">Nebraska</option>
+						<option value="NV">Nevada</option>
+						<option value="NH">New Hampshire</option>
+						<option value="NJ">New Jersey</option>
+						<option value="NM">New Mexico</option>
+						<option value="NY">New York</option>
+						<option value="NC">North Carolina</option>
+						<option value="ND">North Dakota</option>
+						<option value="OH">Ohio</option>
+						<option value="OK">Oklahoma</option>
+						<option value="OR">Oregon</option>
+						<option value="PA">Pennsylvania</option>
+						<option value="RI">Rhode Island</option>
+						<option value="SC">South Carolina</option>
+						<option value="SD">South Dakota</option>
+						<option value="TN">Tennessee</option>
+						<option value="TX">Texas</option>
+						<option value="UT">Utah</option>
+						<option value="VT">Vermont</option>
+						<option value="VA">Virginia</option>
+						<option value="WA">Washington</option>
+						<option value="WV">West Virginia</option>
+						<option value="WI">Wisconsin</option>
+						<option value="WY">Wyoming</option>
+					</select>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<div class="container-fluid data" id="storms">
+	<div class = "row-fluid lit">
+		<div class = "col-md-12">
+			<div class="section"><h2>Major Storms</h2><h5>Hover to find out more.</h5><h5> Click "Investigate Climate" to see the relation between each storm and climate variance above.</h5></div>
+		</div>
+	</div>
+	<div class = "row-fluid lit" id="stormsection">
+		<div class = "col-md-4 visual1">
+			<h4>Hurricane Sandy</h4>
+			<div class="container"><img src="img/sandy.jpg" alt="Avatar" class="image">
+				<div class="overlay">
+					<div class="text3">Date: October 22, 2012 <br> Damage: $75 billion <br> Fatalities: 233</div>
+				</div>
+				</div>
+			<br>
+			<a href="#damagesection" class="specstorm"><button class="button" onclick="pic1()">Investigate Climate</button></a>
+			<br>
+			<img src = "img/newjersey.jpg" id = "img" style="display:none;"/>
+			<br>
+			<br>
+		</div>
+		<div class = "col-md-4 visual1">
+			<h4>Joplin Tornado</h4>
+			<div class="container"><img src="img/joplin.jpg" alt="Avatar" class="image">
+				<div class="overlay">
+					<div class="text3">Date: May 22, 2011 <br> Damage: $2.8 billion <br> Fatalities: 161</div>
+				</div></div>
+			<br>
+			<a href="#damagesection" class="specstorm"><button class="button" onclick="pic2()">Investigate Climate</button></a>
+			<br>
+			<img src = "img/missouri.jpg" id = "img2" style="display:none;"/>
+			<br>
+			<br>
+		</div>
+		<div class = "col-md-4 visual1">
+			<h4>Hurricane Katrina</h4>
+			<div class="container"><img src="img/katrina.jpg" alt="Avatar" class="image">
+				<div class="overlay">
+					<div class="text3">Date: August 23, 2005 <br> Damage: $108 billion <br> Fatalities: 1,833</div>
+				</div></div>
+			<br>
+			<a href="#damagesection" class="specstorm"><button class="button" onclick="pic3()">Investigate Climate</button></a>
+			<br>
+			<img src = "img/louisiana.jpg" id = "img3" style="display:none;"/>
+			<br>
+			<br>
+		</div>
+
+	</div>
+</div>
+
+<div class="container-fluid data" id="climatechange">
+	<div class="hero-image overview">
+		<div class="hero-text">
+			<h1>Climate Change</h1><h3> “There’s one issue that will define the contours of this century more dramatically than any other, and that is the urgent threat of a changing climate.”</h3><h5>Barack Obama, Former President of the United States of America</h5>
+			<a class="arrow" href="#climatechangesection">&#8744;</a>
+		</div>
+	</div>
+	<div class = "row-fluid lit" id="climatechangesection">
+		<div class= "col-sm-8 visual1 choro-visual">
+			<h4>State Temperature Change and Weather Events by Year</h4>
+
+			<div id="dateRange-text">
+				<label for="dateRange"
+					   style="display: inline-block; width: 240px; text-align: center">
+					Year: <span id="dateRange-value"></span>
+				</label>
+			</div>
+
+			<input type="range" step='1' min="0" max="36" id="dateRange" onchange=updateVis()>
+			<div class = "choropleth">
+				<div id="choro"></div>
+			</div>
+		</div>
+		<div class= "col-sm-4 text choro-text bet">
+			<br/>
+			<br/>
+			<div id="choro-instructions">
+				<h4>You've seen the uptick in severe weather events. You've seen the toll climate change takes. Now explore more and dive into the
+					detail of how climate change and severe weather events have changed over time for the whole nation.</h4>
+				<p>Use the timeline to change year, and hover over states to see the number of severe weather events.</p>
+				<p>Interact further by clicking the buttons below - you can filter severe weather events to look at specific types,
+					hide weather events to focus just on climate variance, or transition the map to a bar-chart of states based on how
+					many severe weather events have occurred in that year.
+				</p>
+				<br>
+				<h6>Disclaimer: We are taking a random sampling of the severe weather occurences per year due to the dataset size, and certain weather events were not properly documented over the years.</h6>
+				<br>
+			</div>
+			<form class="form-inline">
+				<div class="form-group">
+					<label for="ranking" id="ranking-text">Filter by: </label>
+				<br/>
+					<select class="form-control" id="ranking" onchange="updateVis()">
+						<option value="all">All Events</option>
+						<option value="Blizzard">Blizzard</option>
+						<option value="Flood">Flood</option>
+						<option value="Hail">Hail</option>
+						<option value="Hurricane">Hurricane</option>
+						<option value="Thunderstorm">Thunderstorm</option>
+						<option value="Tornado">Tornado</option>
+						<option value="Tropical Storm">Tropical Storm</option>
+						<option value="Tsunami">Tsunami</option>
+						<option value="Wildfire">Wildfire</option>
+					</select>
+				</div>
+			</form>
+			<br>
+			<div id="choro-manipulate">
+				<input type="checkbox" id="myCheckbox" onclick="updateVis()"> Hide Events
+				<button class= "button" id=button onclick="visTrans()">Bar Chart</button>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container-fluid data">
+	<div class= "col-sm-2"></div>
+	<div class= "col-sm-8">
+		<div class="bottom-bar">
+			<br/>
+				<p>This project was created in 2017 as a collaboration between Molly Cinnamon, Kyle Devine, and Frances Shapiro for Harvard CS171.<br/>
+					Data was collected from <a href="https://www.ncdc.noaa.gov/">The National Climactic Data Center</a> and the <a href="http://www.noaa.gov/weather">National Oceanic and Atmospheric Administration.</a>
+				</p>
+		</div>
+	</div>
+	<div class= "col-sm-2"></div>
+
+</div>
+
+	<!-- Load JS libraries -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/queue.min.js"></script>
+	<script src="js/topojson.min.js"></script>
+	<script src="js/d3.js"></script>
+	<script src="js/d3-rect.min.js"></script>
+
+	<!-- Visualization objects -->
+	<script src="js/stackedAreaChart.js"></script>
+	<script src="js/timeline.js"></script>
+	<script src="js/lineChart.js"></script>
+	<script src="js/americaClimate.js"></script>
+	<script src="js/lineChart.js"></script>
+	<script src="js/scroll.js"></script>
+	<script src="js/sectionscroll.js"></script>
+	<script src="js/newsScroll.js"></script>
+
+
+	<!-- Load data, create visualizations -->
+	<script src="js/main.js"></script>
+
+	<script src="js/flubber.min.js"></script>
+	<script src="js/counter.js"></script>
+
 </body>
 </html>
